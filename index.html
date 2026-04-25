@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Amazon</title>
     <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
@@ -102,20 +103,80 @@
 </div>
 <div class="shop-sec">
     <div class="b">
+
+    <title>Amazon Clone</title>
+
+    <!-- Fixed Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<div class="navbar">    
+
+    <div class="nav-logo border">
+        <div class="logo"></div>
+    </div>
+
+    <!-- FIXED -->
+    <div id="address" class="border">
+        <p class="p1">Deliver to</p>
+        <div class="icon">
+            <p class="p2">India</p> 
+        </div>  
+    </div>
+
+    <!-- SEARCH -->
+    <div class="nav-search border">
+        <select class="select">
+            <option>All</option>
+        </select>
+
+        <input type="text" id="searchInput" class="nav-search-input" placeholder="Search Amazon">
+
+        <div class="iconn" onclick="handleSearch()">
+            🔍
+        </div>
+    </div>
+
+</div>
+</header>
+
+<!-- HERO -->
+<div class="hero-sec">
+    <div class="hero-msg">
+        <p>Amazon Clone UI</p>
+    </div>
+</div>
+
+<!-- PRODUCTS -->
+<div class="shop-sec">
+
+    <div class="b" data-name="clothes">
+>>>>>>> c4049a4 (Added Amazon clone with search functionality)
         <div class="content">  
             <h2>Clothes</h2>
             <div class="box-img" style="background-image: url('box1_image.jpg');"></div>
             <p class="see">See more</p>
         </div>
 
+
     </div>
     <div class="b">
+
+    </div>
+
+    <div class="b" data-name="health">
+
         <div class="content">  
             <h2>Health & Personal Care</h2>
             <div class="box-img" style="background-image: url('box2_image.jpg');"></div>
             <p class="see">See more</p>
         </div>
     </div>
+
         <div class="b">
             <div class="content">  
                 <h2>Furniture</h2>
@@ -219,5 +280,80 @@
     </div>
 </div>
 </footer>
+
+
+    <div class="b" data-name="furniture">
+        <div class="content">  
+            <h2>Furniture</h2>
+            <div class="box-img" style="background-image: url('box3_image.jpg');"></div>
+            <p class="see">See more</p>
+        </div>
+    </div>
+
+    <div class="b" data-name="electronics">
+        <div class="content">  
+            <h2>Electronics</h2>
+            <div class="box-img" style="background-image: url('box4_image.jpg');"></div>
+            <p class="see">See more</p>
+        </div>
+    </div>
+
+    <div class="b" data-name="beauty">
+        <div class="content">  
+            <h2>Beauty</h2>
+            <div class="box-img" style="background-image: url('box5_image.jpg');"></div>
+            <p class="see">See more</p>
+        </div>
+    </div>
+
+    <div class="b" data-name="pets">
+        <div class="content">  
+            <h2>Pet Care</h2>
+            <div class="box-img" style="background-image: url('box6_image.jpg');"></div>
+            <p class="see">See more</p>
+        </div>
+    </div>
+
+    <div class="b" data-name="toys">
+        <div class="content">  
+            <h2>Toys</h2>
+            <div class="box-img" style="background-image: url('box7_image.jpg');"></div>
+            <p class="see">See more</p>
+        </div>
+    </div>
+
+    <div class="b" data-name="fashion">
+        <div class="content">  
+            <h2>Fashion</h2>
+            <div class="box-img" style="background-image: url('box8_image.jpg');"></div>
+            <p class="see">See more</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="foot-panel1">Back to Top</div>
+</footer>
+
+<!-- 🔥 JAVASCRIPT -->
+<script>
+function handleSearch() {
+    const query = document.getElementById("searchInput").value.toLowerCase();
+    const items = document.querySelectorAll(".b");
+
+    items.forEach(item => {
+        const name = item.getAttribute("data-name");
+
+        if (name.includes(query)) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
+</script>
+
 </body>
 </html>
